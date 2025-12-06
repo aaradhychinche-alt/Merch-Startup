@@ -4,9 +4,11 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    /* Lighter overlay for light theme */
     backdrop-filter: blur(5px);
-    z-index: 200;
+    z-index: 2000;
+    /* Higher than modal */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -24,13 +26,14 @@
     width: 100%;
     max-width: 450px;
     height: 100vh;
-    background: #0d0d0d;
+    background: var(--background);
     border-left: 1px solid var(--border-color);
-    z-index: 201;
+    z-index: 2001;
+    /* Higher than overlay */
     display: flex;
     flex-direction: column;
     transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .drawerOpen {
@@ -71,7 +74,7 @@
 .itemImage {
     width: 80px;
     height: 80px;
-    background: #111;
+    background: var(--background-secondary);
     border-radius: 8px;
     position: relative;
     overflow: hidden;
@@ -124,7 +127,7 @@
 .footer {
     padding: 1.5rem;
     border-top: 1px solid var(--border-color);
-    background: #0d0d0d;
+    background: var(--background);
 }
 
 .totalRow {
@@ -139,8 +142,10 @@
 .checkoutBtn {
     width: 100%;
     padding: 1rem;
-    background: var(--accent-red);
-    color: white;
+    background: var(--foreground);
+    /* Black button */
+    color: var(--background);
+    /* White text */
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 4px;
@@ -148,12 +153,12 @@
 }
 
 .checkoutBtn:hover {
-    background: #cc0000;
+    background: var(--accent-gray);
 }
 
 .checkoutBtn:disabled {
-    background: #333;
-    color: #666;
+    background: var(--background-secondary);
+    color: var(--accent-gray);
     cursor: not-allowed;
 }
 
