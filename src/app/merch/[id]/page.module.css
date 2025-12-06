@@ -1,0 +1,87 @@
+.container {
+    padding: 4rem 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--background-secondary);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.details {
+    padding-top: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.price {
+    font-size: 1.5rem;
+    color: var(--accent-red);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.description {
+    color: var(--accent-gray);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.addToCart {
+    width: 100%;
+    background: var(--foreground);
+    color: var(--background);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.addToCart:hover {
+    background: #ccc;
+    transform: translateY(-2px);
+}
+
+.addToCart:disabled {
+    background: var(--background-secondary);
+    color: var(--accent-gray);
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

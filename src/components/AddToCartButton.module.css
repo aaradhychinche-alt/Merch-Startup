@@ -1,0 +1,24 @@
+.addToCart {
+    width: 100%;
+    background: var(--foreground);
+    color: var(--background);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.addToCart:hover {
+    background: #ccc;
+    transform: translateY(-2px);
+}
+
+.addToCart:disabled {
+    background: var(--background-secondary);
+    color: var(--accent-gray);
+    cursor: not-allowed;
+    transform: none;
+}
