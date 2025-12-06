@@ -1,11 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./page.module.css";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { useState } from "react";
+import ProductModal from "@/components/ProductModal";
+import { Product } from "@/data/products";
 
 export default function Home() {
   const featuredProducts = products.slice(0, 3); // Show first 3
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
     <div className={styles.container}>
@@ -27,7 +33,7 @@ export default function Home() {
             Premium apparel and gear designed for the champions of tomorrow.
             Join the legacy.
           </p>
-          <Link href="/merch" className={styles.ctaButton}>
+          <Link href="/shop" className={styles.ctaButton}>
             Shop Main Drop
           </Link>
         </div>
@@ -37,7 +43,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Latest Drops</h2>
-            <Link href="/merch" className={styles.ViewAll}>
+            <Link href="/shop" className={styles.ViewAll}>
               View All Products
             </Link>
           </div>
@@ -47,11 +53,19 @@ export default function Home() {
               <ProductCard
                 key={product.id}
                 {...product}
+                onClick={() => setSelectedProduct(product)}
               />
             ))}
           </div>
         </section>
       </div>
+
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </div>
   );
 }

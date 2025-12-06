@@ -21,7 +21,7 @@ const Navbar = () => {
                     <div className={styles.links}>
                         <Link href="/" className={styles.link}>Home</Link>
                         <Link href="/story" className={styles.link}>Story</Link>
-                        <Link href="/merch" className={styles.link}>Merch</Link>
+                        <Link href="/shop" className={styles.link}>Merch</Link>
                         <Link href="/community" className={styles.link}>Community</Link>
                         <Link href="/support" className={styles.link}>Support</Link>
                     </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
                 <Link href="/" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Home</Link>
                 <Link href="/story" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Story</Link>
-                <Link href="/merch" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Merch</Link>
+                <Link href="/shop" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Merch</Link>
                 <Link href="/community" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Community</Link>
                 <Link href="/support" className={styles.mobileLink} onClick={() => setIsMenuOpen(false)}>Support</Link>
             </div>

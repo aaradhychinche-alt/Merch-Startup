@@ -1,7 +1,13 @@
-import ProductCard from "@/components/ProductCard";
-import { products } from "@/data/products";
+"use client";
 
-export default function MerchPage() {
+import { useState } from "react";
+import ProductCard from "@/components/ProductCard";
+import ProductModal from "@/components/ProductModal";
+import { products, Product } from "@/data/products";
+
+export default function ShopPage() {
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
     return (
         <div className="container" style={{ padding: '4rem 24px' }}>
             <header style={{ marginBottom: '3rem', textAlign: 'center' }}>
@@ -18,9 +24,17 @@ export default function MerchPage() {
                     <ProductCard
                         key={product.id}
                         {...product}
+                        onClick={() => setSelectedProduct(product)}
                     />
                 ))}
             </div>
+
+            {selectedProduct && (
+                <ProductModal
+                    product={selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                />
+            )}
         </div>
     );
 }
