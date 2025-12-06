@@ -1,4 +1,4 @@
-.footer {
+```css .footer {
     background: var(--background-secondary);
     border-top: 1px solid var(--border-color);
     padding: 4rem 0 2rem;
@@ -57,7 +57,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--accent-gray);
+    color: #666;
     font-size: 0.8rem;
 }
 

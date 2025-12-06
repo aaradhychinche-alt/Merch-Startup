@@ -1,11 +1,12 @@
 :root {
   --background: #FFFFFF;
-  --background-secondary: #F5F5F5;
+  --background-secondary: #F4F4F4;
   --foreground: #000000;
-  --accent-red: #FF1A1A;
+  /* Replacing Red with Black as requested */
+  --accent-red: #000000;
   --accent-gray: #666666;
-  --border-color: #E5E5E5;
-  --card-hover: #FAFAFA;
+  --border-color: #E0E0E0;
+  --card-hover: #EEEEEE;
 }
 
 html,

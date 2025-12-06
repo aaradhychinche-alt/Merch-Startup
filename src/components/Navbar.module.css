@@ -8,7 +8,71 @@
     padding: 1rem 0;
 }
 
-/* ... unchanged ... */
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--foreground);
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    color: var(--accent-gray);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: var(--foreground);
+}
+
+.active {
+    color: var(--foreground);
+}
+
+.icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.iconBtn {
+    color: var(--foreground);
+    transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+    color: var(--accent-gray);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+
+    .mobileTrigger {
+        display: block !important;
+    }
+}
+
+.mobileTrigger {
+    display: none;
+}
 
 .mobileMenuOverlay {
     position: fixed;
@@ -16,7 +80,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(20px);
     z-index: 200;
     display: flex;
