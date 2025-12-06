@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Vedam | Premium Merch",
   description: "Official Vedam Merchandise Store",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
