@@ -5,19 +5,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 70%);
+  background: var(--background);
   position: relative;
   overflow: hidden;
 }
 
-.backgroundWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
 
 .heroContent {
   z-index: 2;
@@ -57,9 +49,9 @@
 }
 
 .ctaButton:hover {
-  background: #cc0000;
+  background: #333;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 26, 26, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .section {

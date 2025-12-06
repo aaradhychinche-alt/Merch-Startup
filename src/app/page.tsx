@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { useState } from "react";
 import ProductModal from "@/components/ProductModal";
 import { Product } from "@/data/products";
@@ -16,17 +15,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <section className={styles.hero}>
-        <div className={styles.backgroundWrapper}>
-          <SparklesCore
-            id="tsparticlesfullpage"
-            background="transparent"
-            minSize={0.6}
-            maxSize={1.4}
-            particleDensity={100}
-            className={styles.backgroundWrapper}
-            particleColor="#FFFFFF"
-          />
-        </div>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>DUMMY</h1>
           <p className={styles.heroSubtitle}>
