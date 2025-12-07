@@ -19,9 +19,9 @@ const Navbar = () => {
                         <Image
                             src="/favicon.ico"
                             alt="Vedam Logo"
-                            width={40}
-                            height={40}
-                            style={{ width: 'auto', height: '40px' }}
+                            width={80}
+                            height={80}
+                            style={{ width: 'auto', height: '80px' }}
                         />
                     </Link>
 
