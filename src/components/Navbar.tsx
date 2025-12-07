@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Search, Heart, ShoppingCart, User, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -13,9 +14,15 @@ const Navbar = () => {
     return (
         <>
             <nav className={styles.navbar}>
-                <div className={`container ${styles.navContainer}`}>
+                <div className={`container ${styles.navContainer} `}>
                     <Link href="/" className={styles.logo}>
-                        VEDAM
+                        <Image
+                            src="/favicon.ico"
+                            alt="Vedam Logo"
+                            width={40}
+                            height={40}
+                            style={{ width: 'auto', height: '40px' }}
+                        />
                     </Link>
 
                     <div className={styles.links}>
@@ -65,7 +72,7 @@ const Navbar = () => {
                         </button>
                         {/* Mobile Menu Trigger */}
                         <button
-                            className={`${styles.iconBtn} ${styles.mobileTrigger}`}
+                            className={`${styles.iconBtn} ${styles.mobileTrigger} `}
                             aria-label="Menu"
                             onClick={() => setIsMenuOpen(true)}
                         >
@@ -76,7 +83,7 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Menu Overlay */}
-            <div className={`${styles.mobileMenuOverlay} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+            <div className={`${styles.mobileMenuOverlay} ${isMenuOpen ? styles.mobileMenuOpen : ''} `}>
                 <button
                     className={styles.closeBtn}
                     onClick={() => setIsMenuOpen(false)}
