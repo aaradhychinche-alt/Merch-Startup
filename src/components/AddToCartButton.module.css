@@ -12,8 +12,15 @@
 }
 
 .addToCart:hover {
-    background: #ccc;
-    transform: translateY(-2px);
+    background: var(--accent-gray);
+    color: white;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.addToCart:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .addToCart:disabled {

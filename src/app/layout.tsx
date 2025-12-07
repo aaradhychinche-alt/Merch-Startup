@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import SmoothScrolling from "@/components/SmoothScrolling";
+import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,12 +27,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <CartProvider>
-          <Navbar />
-          <CartDrawer />
-          <main style={{ minHeight: '100vh' }}>
-            {children}
-          </main>
-          <Footer />
+          <SmoothScrolling>
+            <Navbar />
+            <CartDrawer />
+            <PageTransition>
+              <main style={{ minHeight: '100vh' }}>
+                {children}
+              </main>
+            </PageTransition>
+            <Footer />
+          </SmoothScrolling>
         </CartProvider>
       </body>
     </html>

@@ -50,8 +50,13 @@
 
 .ctaButton:hover {
   background: #333;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .section {
